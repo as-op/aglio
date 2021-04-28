@@ -23,7 +23,7 @@ Note: **This is an experiment to upgrade** in forking [aglio](https://github.com
  * ESLinted
 
 ## Example Output
-Example output is generated from the [example API Blueprint](https://raw.github.com/as-op/aglio/master/example.apib) using the default [Olio theme](https://github.com/as-op/aglio/tree/lib/aglio-olio-theme#readme).
+Example output is generated from the [example API Blueprint](https://raw.github.com/as-op/aglio/master/example.apib) using the default [Olio theme](https://github.com/as-op/aglio/tree/master/lib/aglio-theme-olio).
 
  * Default theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/default.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/default-triple.html)
  * Streak theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/streak.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/streak-triple.html)
@@ -166,7 +166,7 @@ Render an API Blueprint string and pass the generated HTML to the callback. The 
 | locals      | object | `{}`          | Extra locals to pass to templates     |
 | theme       | string | `'default'`   | Theme name to load for rendering      |
 
-In addition, the [default theme](https://github.com/as-op/aglio/tree/lib/aglio-olio-theme#readme) provides the following options:
+In addition, the [default theme](https://github.com/as-op/aglio/tree/master/lib/aglio-theme-olio) provides the following options:
 
 | Option           | Type   | Default   | Description                                  |
 | ---------------- | ------ | --------- | -------------------------------------------- |
