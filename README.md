@@ -1,4 +1,4 @@
-![aglio](https://raw.github.com/as-op/aglio/master/images/aglio.png)
+![aglio](https://raw.github.com/as-op/aglio/main/images/aglio.png)
 
 
 [![license](https://img.shields.io/github/license/as-op/aglio.svg)](http://opensource.org/licenses/MIT)
@@ -23,13 +23,13 @@ Note: **This is an experiment to upgrade** in forking [aglio](https://github.com
  * ESLinted
 
 ## Example Output
-Example output is generated from the [example API Blueprint](https://raw.github.com/as-op/aglio/master/example.apib) using the default [Olio theme](https://github.com/as-op/aglio/tree/master/lib/aglio-theme-olio).
+Example output is generated from the [example API Blueprint](https://raw.github.com/as-op/aglio/main/example.apib) using the default [Olio theme](https://github.com/as-op/aglio/tree/main/lib/aglio-theme-olio).
 
- * Default theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/default.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/default-triple.html)
- * Streak theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/streak.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/streak-triple.html)
- * Flatly theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/flatly.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/flatly-triple.html)
- * Slate theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/slate.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/slate-triple.html)
- * Cyborg theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/cyborg.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/cyborg-triple.html)
+ * Default theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/default.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/default-triple.html)
+ * Streak theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/streak.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/streak-triple.html)
+ * Flatly theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/flatly.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/flatly-triple.html)
+ * Slate theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/slate.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/slate-triple.html)
+ * Cyborg theme [two column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/cyborg.html) or [three column](https://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/main/examples/cyborg-triple.html)
 
 ## Including Files
 It is possible to include other files in your blueprint by using a special include directive with a path to the included file relative to the current file's directory. Included files can be written in API Blueprint, Markdown or HTML (or JSON for response examples). Included files can include other files, so be careful of circular references.
@@ -166,7 +166,7 @@ Render an API Blueprint string and pass the generated HTML to the callback. The 
 | locals      | object | `{}`          | Extra locals to pass to templates     |
 | theme       | string | `'default'`   | Theme name to load for rendering      |
 
-In addition, the [default theme](https://github.com/as-op/aglio/tree/master/lib/aglio-theme-olio) provides the following options:
+In addition, the [default theme](https://github.com/as-op/aglio/tree/main/lib/aglio-theme-olio) provides the following options:
 
 | Option           | Type   | Default   | Description                                  |
 | ---------------- | ------ | --------- | -------------------------------------------- |
@@ -247,7 +247,7 @@ The `my-variables.less` file might contain a custom HTTP PUT color specification
 @put-border-color: darken(spin(@put-background-color, -10), 5%);
 ```
 
-See the [default variables](https://github.com/as-op/aglio/blob/master/lib/aglio-theme-olio/styles/variables-default.less) file for examples of which variables can be set.
+See the [default variables](https://github.com/as-op/aglio/blob/main/lib/aglio-theme-olio/styles/variables-default.less) file for examples of which variables can be set.
 
 The `--theme-style` option lets you override built-in styles with your own LESS or CSS definitions. It is processed **after** the variables have been defined, so the variables are available for your use. If you wish to modify a rule from an existing built-in style then you must copy the style. The order of loading roughly follows:
 
@@ -269,7 +269,7 @@ Note that these options can be passed more than once, in which case they will be
 * `default`
 
 ### Customizing Layout Templates
-The `--theme-template` option allows you to provide a custom layout template that overrides the default. This is specified in the form of a [Pug](https://pugjs.org) template file. See the [default template](https://github.com/as-op/aglio/blob/master/lib/aglio-theme-olio/templates/index.pug) file for an example.
+The `--theme-template` option allows you to provide a custom layout template that overrides the default. This is specified in the form of a [Pug](https://pugjs.org) template file. See the [default template](https://github.com/as-op/aglio/blob/main/lib/aglio-theme-olio/templates/index.pug) file for an example.
 
 The locals available to templates look like the following:
 
