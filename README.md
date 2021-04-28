@@ -1,16 +1,17 @@
-![aglio](https://raw.github.com/danielgtaylor/aglio/master/images/aglio.png)
+![aglio](https://raw.github.com/as-op/aglio/master/images/aglio.png)
 
-[![Dependency Status](http://img.shields.io/david/danielgtaylor/aglio.svg?style=flat)](https://david-dm.org/danielgtaylor/aglio) [![Build Status](http://img.shields.io/travis/danielgtaylor/aglio/master.svg?style=flat)](https://travis-ci.org/danielgtaylor/aglio) [![Coverage Status](http://img.shields.io/coveralls/danielgtaylor/aglio.svg?style=flat)](https://coveralls.io/r/danielgtaylor/aglio) [![NPM version](http://img.shields.io/npm/v/aglio.svg?style=flat)](https://www.npmjs.org/package/aglio) [![License](http://img.shields.io/npm/l/aglio.svg?style=flat)](https://www.npmjs.org/package/aglio) [![Gitter](https://img.shields.io/badge/gitter-chat-orange.svg)](https://gitter.im/danielgtaylor/aglio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+[![license](https://img.shields.io/github/license/as-op/aglio.svg)](http://opensource.org/licenses/MIT)
 
 # Introduction
 
 An [API Blueprint](http://apiblueprint.org/) renderer that supports multiple themes and outputs static HTML that can be served by any web host. API Blueprint is a Markdown-based document format that lets you write API descriptions and documentation in a simple and straightforward way. Currently supported is [API Blueprint format 1A](https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md).
 
-**Note**: This project is mature and stable, but I don't have much time for it anymore. If you would like to join as a maintainer then please reach out to my GitHub username at Gmail. Thanks!
+Note: **This is an experiment to upgrade** in forking [aglio](https://github.com/danielgtaylor/aglio), which is unmaintained.
 
 ## Features
 
- * Fast parsing thanks to [Protagonist](https://github.com/apiaryio/protagonist)
+ * Parsing with [drafter.js](https://github.com/apiaryio/drafter.js/)
  * Asyncronous processing
  * Multiple templates/themes
  * Support for custom colors, templates, and theme engines
@@ -19,16 +20,16 @@ An [API Blueprint](http://apiblueprint.org/) renderer that supports multiple the
  * Live-reloading preview server `aglio -i service.apib --server`
  * Node.js library `require('aglio')`
  * Excellent test coverage
- * Tested on [BrowserStack](https://www.browserstack.com/)
+ * ESLinted
 
 ## Example Output
-Example output is generated from the [example API Blueprint](https://raw.github.com/danielgtaylor/aglio/master/example.apib) using the default [Olio theme](https://github.com/danielgtaylor/aglio/tree/olio-theme#readme).
+Example output is generated from the [example API Blueprint](https://raw.github.com/as-op/aglio/master/example.apib) using the default [Olio theme](https://github.com/as-op/aglio/tree/lib/aglio-olio-theme#readme).
 
- * Default theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/default.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/default-triple.html)
- * Streak theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/streak.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/streak-triple.html)
- * Flatly theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/flatly.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/flatly-triple.html)
- * Slate theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/slate.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/slate-triple.html)
- * Cyborg theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/cyborg.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/danielgtaylor/aglio/blob/master/examples/cyborg-triple.html)
+ * Default theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/default.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/default-triple.html)
+ * Streak theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/streak.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/streak-triple.html)
+ * Flatly theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/flatly.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/flatly-triple.html)
+ * Slate theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/slate.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/slate-triple.html)
+ * Cyborg theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/cyborg.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/cyborg-triple.html)
 
 ## Including Files
 It is possible to include other files in your blueprint by using a special include directive with a path to the included file relative to the current file's directory. Included files can be written in API Blueprint, Markdown or HTML (or JSON for response examples). Included files can include other files, so be careful of circular references.
@@ -41,10 +42,10 @@ For tools that do not support this include directive it will just render out as 
 
 
 # Installation & Usage
-There are three ways to use aglio: as an executable, in a docker container or as a library for Node.js.
+There are two ways to use aglio: as an executable or as a library for Node.js.
 
 ## Executable
-Install aglio via NPM. You need Node.js installed and you may need to use `sudo` to install globally:
+Install aglio via NPM. You need Node.js installed.
 
 ```bash
 npm install -g aglio
@@ -66,7 +67,7 @@ aglio --theme-variables slate -i input.apib -o output.html
 aglio --theme-style default --theme-style ./my-style.less -i input.apib -o output.html
 
 # Custom layout template
-aglio --theme-template /path/to/template.jade -i input.apib -o output.html
+aglio --theme-template /path/to/template.pug -i input.apib -o output.html
 
 # Custom theme engine
 aglio -t my-engine -i input.apib -o output.html
@@ -88,17 +89,6 @@ aglio --include-path /path/to/includes -i - -o output.html
 
 # Output verbose error information with stack traces
 aglio -i input.apib -o output.html --verbose
-```
-
-## With Docker
-You can choose to use the provided `Dockerfile` to build yourself a repeatable and testable environment:
-
-1. Build the image with `docker build -t aglio .`
-2. Run aglio inside a container with `docker run -t aglio`
-  You can use the `-v` switch to dynamically mount the folder that holds your API blueprint:
-
-```bash
-docker run -v $(pwd):/tmp -t aglio -i /tmp/input.apib -o /tmp/output.html
 ```
 
 ## Node.js Library
@@ -128,7 +118,7 @@ aglio.render(blueprint, options, function (err, html, warnings) {
 
 // Render a blueprint with a custom template file
 options = {
-  themeTemplate: '/path/to/my-template.jade'
+  themeTemplate: '/path/to/my-template.pug'
 };
 aglio.render(blueprint, options, function (err, html, warnings) {
     if (err) return console.log(err);
@@ -141,7 +131,7 @@ aglio.render(blueprint, options, function (err, html, warnings) {
 // Pass custom locals along to the template, for example
 // the following gives templates access to lodash and async
 options = {
-    themeTemplate: '/path/to/my-template.jade',
+    themeTemplate: '/path/to/my-template.pug',
     locals: {
         _: require('lodash'),
         async: require('async')
@@ -176,7 +166,7 @@ Render an API Blueprint string and pass the generated HTML to the callback. The 
 | locals      | object | `{}`          | Extra locals to pass to templates     |
 | theme       | string | `'default'`   | Theme name to load for rendering      |
 
-In addition, the [default theme](https://github.com/danielgtaylor/aglio/tree/olio-theme) provides the following options:
+In addition, the [default theme](https://github.com/as-op/aglio/tree/lib/aglio-olio-theme#readme) provides the following options:
 
 | Option           | Type   | Default   | Description                                  |
 | ---------------- | ------ | --------- | -------------------------------------------- |
@@ -217,27 +207,21 @@ aglio.renderFile('/tmp/input.apib', '/tmp/output.html', options, function (err, 
 Pull requests are encouraged! Feel free to fork and hack away, especially on new themes. The build system in use is Grunt, so make sure you have it installed:
 
 ```bash
-npm install -g grunt-cli
-```
-
-Then you can build the source and run the tests:
-
-```bash
-# Lint/compile the Coffeescript
-grunt
+# Lint/compile the js
+npm run lint
 
 # Run the test suite
-grunt test
+npm run test
 
 # Generate an HTML test coverage report
-grunt coverage
+npm run coverage
 
 # Render examples
-grunt examples
+npm run gen:examples
 ```
 
 ## Customizing Output
-Aglio is split into two components: a base that contains logic for loading API Blueprint, handling commandline arguments, etc and a theme engine that handles turning the API Blueprint AST into HTML. The default theme engine that ships with Aglio is called [olio](https://github.com/danielgtaylor/aglio/tree/olio-theme). Templates are written in Jade, with support for inline Coffeescript, LESS and Stylus via filters. The default stylesheets are written in LESS.
+Aglio is split into two components: a base that contains logic for loading API Blueprint, handling commandline arguments, etc and a theme engine that handles turning the API Blueprint AST into HTML. The default theme engine that ships with Aglio is called olio, included in this repository. Templates are written in pug. The default stylesheets are written in LESS.
 
 While developing customizations, you may want to disable caching using the `NOCACHE` environment variable.
 
@@ -263,7 +247,7 @@ The `my-variables.less` file might contain a custom HTTP PUT color specification
 @put-border-color: darken(spin(@put-background-color, -10), 5%);
 ```
 
-See the [default variables](https://github.com/danielgtaylor/aglio/blob/olio-theme/styles/variables-default.less) file for examples of which variables can be set.
+See the [default variables](https://github.com/as-op/aglio/blob/lib/aglio-olio-theme/styles/variables-default.less) file for examples of which variables can be set.
 
 The `--theme-style` option lets you override built-in styles with your own LESS or CSS definitions. It is processed **after** the variables have been defined, so the variables are available for your use. If you wish to modify a rule from an existing built-in style then you must copy the style. The order of loading roughly follows:
 
@@ -285,7 +269,7 @@ Note that these options can be passed more than once, in which case they will be
 * `default`
 
 ### Customizing Layout Templates
-The `--theme-template` option allows you to provide a custom layout template that overrides the default. This is specified in the form of a [Jade](http://jade-lang.com/) template file. See the [default template](https://github.com/danielgtaylor/aglio/blob/olio-theme/templates/index.jade) file for an example.
+The `--theme-template` option allows you to provide a custom layout template that overrides the default. This is specified in the form of a [Pug](https://pugjs.org) template file. See the [default template](https://github.com/as-op/aglio/blob/lib/olio-theme/aglio-theme-olio/templates/index.pug) file for an example.
 
 The locals available to templates look like the following:
 
@@ -305,7 +289,7 @@ The locals available to templates look like the following:
 * `default`
 
 ### Using Custom Themes
-While Aglio ships with a default theme, you have the option of installing and using third-party theme engines. They may use any technology and are not limited to Jade and LESS. Consult the theme's documentation to see which options are available and how to use and customize the theme. Common usage between all themes:
+While Aglio ships with a default theme, you have the option of installing and using third-party theme engines. They may use any technology and are not limited to Pug and LESS. Consult the theme's documentation to see which options are available and how to use and customize the theme. Common usage between all themes:
 
 ```bash
 # Install a custom theme engine globally
@@ -375,7 +359,7 @@ aglio -t hello --theme-name Daniel -i example.apib -o -
 => 'Hello, Daniel!'
 ```
 
-You are free to use whatever template system (Jade, EJS, Nunjucks, etc) and any supporting libraries (e.g. for CSS) you like.
+You are free to use whatever template system (Pug, EJS, Nunjucks, etc) and any supporting libraries (e.g. for CSS) you like.
 
 License
 =======

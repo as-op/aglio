@@ -1,3 +1,12 @@
+# fork
+
+* Switch to [drafter.js](https://github.com/apiaryio/drafter.js/) to avoid native compilation problems
+* Include default theme "olio", it was integrated and required anyhow
+* Get rid of Coffee-Script, use pure ES
+* Update dependencies & adapt to them
+* ESLint
+* Cherry-picked changes by https://github.com/martide/aglio
+
 # 2.3.0
 
 * Switch to [Drafter](https://github.com/apiaryio/drafter-npm) for API Blueprint parsing. [#277](https://github.com/danielgtaylor/aglio/pull/277)
