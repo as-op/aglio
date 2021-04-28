@@ -25,11 +25,11 @@ Note: **This is an experiment to upgrade** in forking [aglio](https://github.com
 ## Example Output
 Example output is generated from the [example API Blueprint](https://raw.github.com/as-op/aglio/master/example.apib) using the default [Olio theme](https://github.com/as-op/aglio/tree/master/lib/aglio-theme-olio).
 
- * Default theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/default.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/default-triple.html)
- * Streak theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/streak.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/streak-triple.html)
- * Flatly theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/flatly.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/flatly-triple.html)
- * Slate theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/slate.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/slate-triple.html)
- * Cyborg theme [two column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/cyborg.html) or [three column](http://htmlpreview.github.io/?https://raw.githubusercontent.com/as-op/aglio/blob/master/examples/cyborg-triple.html)
+ * Default theme [two column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/default.html) or [three column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/default-triple.html)
+ * Streak theme [two column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/streak.html) or [three column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/streak-triple.html)
+ * Flatly theme [two column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/flatly.html) or [three column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/flatly-triple.html)
+ * Slate theme [two column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/slate.html) or [three column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/slate-triple.html)
+ * Cyborg theme [two column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/cyborg.html) or [three column](https://htmlpreview.github.io/?https://raw.github.com/as-op/aglio/blob/master/examples/cyborg-triple.html)
 
 ## Including Files
 It is possible to include other files in your blueprint by using a special include directive with a path to the included file relative to the current file's directory. Included files can be written in API Blueprint, Markdown or HTML (or JSON for response examples). Included files can include other files, so be careful of circular references.
