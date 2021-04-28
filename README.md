@@ -247,7 +247,7 @@ The `my-variables.less` file might contain a custom HTTP PUT color specification
 @put-border-color: darken(spin(@put-background-color, -10), 5%);
 ```
 
-See the [default variables](https://github.com/as-op/aglio/blob/lib/aglio-olio-theme/styles/variables-default.less) file for examples of which variables can be set.
+See the [default variables](https://github.com/as-op/aglio/blob/master/lib/aglio-theme-olio/styles/variables-default.less) file for examples of which variables can be set.
 
 The `--theme-style` option lets you override built-in styles with your own LESS or CSS definitions. It is processed **after** the variables have been defined, so the variables are available for your use. If you wish to modify a rule from an existing built-in style then you must copy the style. The order of loading roughly follows:
 
@@ -269,7 +269,7 @@ Note that these options can be passed more than once, in which case they will be
 * `default`
 
 ### Customizing Layout Templates
-The `--theme-template` option allows you to provide a custom layout template that overrides the default. This is specified in the form of a [Pug](https://pugjs.org) template file. See the [default template](https://github.com/as-op/aglio/blob/lib/olio-theme/aglio-theme-olio/templates/index.pug) file for an example.
+The `--theme-template` option allows you to provide a custom layout template that overrides the default. This is specified in the form of a [Pug](https://pugjs.org) template file. See the [default template](https://github.com/as-op/aglio/blob/master/lib/aglio-theme-olio/templates/index.pug) file for an example.
 
 The locals available to templates look like the following:
 
