@@ -152,8 +152,8 @@ mixin Content()
     header
         h1#top!= self.api.name || 'API Documentation'
 
-    if self.api.descriptionHtml
-        != self.api.descriptionHtml
+    if self.api.description
+        != self.api.description
 
     //- Loop through and display information about all the resource
     //- groups, resources, and actions.
@@ -163,8 +163,8 @@ mixin Content()
                 != resourceGroup.name || 'Resource Group'
                 = " "
                 a.permalink(href=resourceGroup.elementLink) &para;
-            if resourceGroup.descriptionHtml
-                != resourceGroup.descriptionHtml
+            if resourceGroup.description
+                != resourceGroup.description
 
             each resource in resourceGroup.resources || []
                 .resource(id=resource.elementId)
@@ -210,8 +210,8 @@ mixin ContentTriple()
         h5 API Endpoint
         a(href=self.api.host)= self.api.host
     .middle
-        if self.api.descriptionHtml
-            != self.api.descriptionHtml
+        if self.api.description
+            != self.api.description
 
     //- Loop through and display information about all the resource
     //- groups, resources, and actions.
@@ -222,8 +222,8 @@ mixin ContentTriple()
                     != resourceGroup.name || 'Resource Group'
                     = " "
                     a.permalink(href=resourceGroup.elementLink) &para;
-                if resourceGroup.descriptionHtml
-                    != resourceGroup.descriptionHtml
+                if resourceGroup.description
+                    != resourceGroup.description
 
         each resource in resourceGroup.resources || []
             .middle
