@@ -168,13 +168,14 @@ Render an API Blueprint string and pass the generated HTML to the callback. The 
 
 In addition, the [default theme](https://github.com/as-op/aglio/tree/main/lib/aglio-theme-olio) provides the following options:
 
-| Option           | Type   | Default   | Description                                  |
-| ---------------- | ------ | --------- | -------------------------------------------- |
-| themeVariables   | string | `default` | Built-in color scheme or path to LESS or CSS |
-| themeCondenseNav | bool   | `true`    | Condense single-action navigation links      |
-| themeFullWidth   | bool   | `false`   | Use the full page width                      |
-| themeTemplate    | string |           | Layout name or path to custom layout file    |
-| themeStyle       | string | `default` | Built-in style name or path to LESS or CSS   |
+| Option                | Type   | Default   | Description                                  |
+| --------------------- | ------ | --------- | -------------------------------------------- |
+| themeVariables        | string | `default` | Built-in color scheme or path to LESS or CSS |
+| themeCondenseNav      | bool   | `true`    | Condense single-action navigation links      |
+| themeFullWidth        | bool   | `false`   | Use the full page width                      |
+| themeTemplate         | string |           | Layout name or path to custom layout file    |
+| themeStyle            | string | `default` | Built-in style name or path to LESS or CSS   |
+| themePermalinkSymbol  | string | `¶`       | The symbol in the permalink anchor.          |
 
 
 ```javascript
