@@ -86,7 +86,16 @@
 <p>Markdown</p>
 </li>
 </ul>
-</div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/notes</span></div><div class="tabs"><div class="example-names"><span>Requests</span></div></div></div><div class="middle"><div class="action get" id="notes-note-list-note-list-get"><h4 class="action-heading"><div class="name">Get Notes</div><a class="method get" href="#notes-note-list-note-list-get">GET</a><code class="uri">/notes</code></h4><p>Get a list of notes.</p>
+</div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/notes</span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">X-Request-ID</span><span class="hljs-punctuation">: </span>f72fc914<br><span class="hljs-attribute">X-Response-Time</span><span class="hljs-punctuation">: </span>4ms</code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+  {
+    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Grocery list&quot;</span>,
+    <span class="hljs-attr">&quot;body&quot;</span>: <span class="hljs-string">&quot;Buy milk&quot;</span>
+  }
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  <span class="hljs-attr">&quot;$schema&quot;</span>: <span class="hljs-string">&quot;http://json-schema.org/draft-07/schema#&quot;</span>,
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>
+}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div class="action get" id="notes-note-list-note-list-get"><h4 class="action-heading"><div class="name">Get Notes</div><a class="method get" href="#notes-note-list-note-list-get">GET</a><code class="uri">/notes</code></h4><p>Get a list of notes.</p>
 </div></div><hr class="split"><div class="right"><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/notes</span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">with body</span><span class="tab-button">without body</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json</code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
     <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;My new note&quot;</span>,
     <span class="hljs-attr">&quot;body&quot;</span>: <span class="hljs-string">&quot;This is the body&quot;</span>
@@ -98,7 +107,31 @@
     <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;Invalid title&quot;</span>
 }</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div></div><div class="middle"><div class="action post" id="notes-note-list-note-list-post"><h4 class="action-heading"><div class="name">Create New Note</div><a class="method post" href="#notes-note-list-note-list-post">POST</a><code class="uri">/notes</code></h4><p>Create a new note using a title and an optional content body.</p>
 </div></div><hr class="split"><div class="middle"><div class="resource" id="notes-note"><h3 class="resource-heading">Note <a class="permalink" href="#notes-note">&para;</a></h3><p>Note description</p>
-</div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/notes/<span class="hljs-attribute" title="id">68a5sdf67</span>?<span class="hljs-attribute">body=</span><span class="hljs-literal">false</span></span></div><div class="tabs"><div class="example-names"><span>Requests</span></div></div></div><div class="middle"><div class="action get" id="notes-note-note-get"><h4 class="action-heading"><div class="name">Get Note</div><a class="method get" href="#notes-note-note-get">GET</a><code class="uri">/notes/{id}{?body}</code></h4><p>Get a single note.</p>
+</div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/notes/<span class="hljs-attribute" title="id">68a5sdf67</span>?<span class="hljs-attribute">body=</span><span class="hljs-literal">false</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span><span class="tab-button">404</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">X-Request-ID</span><span class="hljs-punctuation">: </span>f72fc914<br><span class="hljs-attribute">X-Response-Time</span><span class="hljs-punctuation">: </span>4ms</code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;Grocery list&quot;</span>,
+  <span class="hljs-attr">&quot;body&quot;</span>: <span class="hljs-string">&quot;Buy milk&quot;</span>
+}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+  <span class="hljs-attr">&quot;$schema&quot;</span>: <span class="hljs-string">&quot;http://json-schema.org/draft-07/schema#&quot;</span>,
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;properties&quot;</span>: {
+    <span class="hljs-attr">&quot;id&quot;</span>: {
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+    },
+    <span class="hljs-attr">&quot;title&quot;</span>: {
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    },
+    <span class="hljs-attr">&quot;body&quot;</span>: {
+      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  },
+  <span class="hljs-attr">&quot;required&quot;</span>: [
+    <span class="hljs-string">&quot;id&quot;</span>,
+    <span class="hljs-string">&quot;title&quot;</span>
+  ]
+}</code></pre><div style="height: 1px;"></div></div></div></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">X-Request-ID</span><span class="hljs-punctuation">: </span>f72fc914<br><span class="hljs-attribute">X-Response-Time</span><span class="hljs-punctuation">: </span>4ms</code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+    <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;Note not found&quot;</span>
+}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div class="action get" id="notes-note-note-get"><h4 class="action-heading"><div class="name">Get Note</div><a class="method get" href="#notes-note-note-get">GET</a><code class="uri">/notes/{id}{?body}</code></h4><p>Get a single note.</p>
 <div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>68a5sdf67</span></span><p>The note ID</p>
 </dd><dt>body</dt><dd><code>boolean</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>false</span></span><p>Set to <code>false</code> to exclude note body content.</p>
 </dd></dl></div></div></div><hr class="split"><div class="right"><div class="definition"><span class="method put">PUT</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/notes/<span class="hljs-attribute" title="id">68a5sdf67</span></span></div><div class="tabs"><div class="example-names"><span>Requests</span><span class="tab-button">example 1</span><span class="tab-button">delete body</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json</code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -159,11 +192,42 @@
 <p>If the value for <code>title</code> or <code>body</code> is <code>null</code> or <code>undefined</code>, then the corresponding value is not modified on the server. However, if you send an empty string instead then it will <strong>permanently overwrite</strong> the original value.</p>
 </div>
 <div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>68a5sdf67</span></span><p>The note ID</p>
-</dd></dl></div></div></div><hr class="split"><div class="right"><div class="definition"><span class="method delete">DELETE</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/notes/<span class="hljs-attribute" title="id">68a5sdf67</span></span></div><div class="tabs"><div class="example-names"><span>Requests</span></div></div></div><div class="middle"><div class="action delete" id="notes-note-note-delete"><h4 class="action-heading"><div class="name">Delete a Note</div><a class="method delete" href="#notes-note-note-delete">DELETE</a><code class="uri">/notes/{id}</code></h4><p>Delete a single note</p>
+</dd></dl></div></div></div><hr class="split"><div class="right"><div class="definition"><span class="method delete">DELETE</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/notes/<span class="hljs-attribute" title="id">68a5sdf67</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">204</span><span class="tab-button">404</span></div><div class="tab"><div><div class="inner"><div class="description text-muted">This response has no content.</div><div style="height: 1px;"></div></div></div></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">X-Request-ID</span><span class="hljs-punctuation">: </span>f72fc914<br><span class="hljs-attribute">X-Response-Time</span><span class="hljs-punctuation">: </span>4ms</code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+    <span class="hljs-attr">&quot;error&quot;</span>: <span class="hljs-string">&quot;Note not found&quot;</span>
+}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div class="action delete" id="notes-note-note-delete"><h4 class="action-heading"><div class="name">Delete a Note</div><a class="method delete" href="#notes-note-note-delete">DELETE</a><code class="uri">/notes/{id}</code></h4><p>Delete a single note</p>
 <div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>68a5sdf67</span></span><p>The note ID</p>
 </dd></dl></div></div></div><hr class="split"><div class="middle"><section class="resource-group" id="users"><h2 class="group-heading">Users <a class="permalink" href="#users">&para;</a></h2><p>Group description</p>
 </section></div><div class="middle"><div class="resource" id="users-user-list"><h3 class="resource-heading">User List <a class="permalink" href="#users-user-list">&para;</a></h3><p>A list of users</p>
-</div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/users?<span class="hljs-attribute">name=</span><span class="hljs-literal">alice</span>&<span class="hljs-attribute">joinedBefore=</span><span class="hljs-literal">2011-01-01</span>&<span class="hljs-attribute">joinedAfter=</span><span class="hljs-literal">2011-01-01</span>&<span class="hljs-attribute">sort=</span><span class="hljs-literal">joined</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">25</span></span></div><div class="tabs"><div class="example-names"><span>Requests</span></div></div></div><div class="middle"><div class="action get" id="users-user-list-user-list-get"><h4 class="action-heading"><div class="name">Get users</div><a class="method get" href="#users-user-list-user-list-get">GET</a><code class="uri">/users{?name,joinedBefore,joinedAfter,sort,limit}</code></h4><p>Get a list of users. Example:</p>
+</div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/users?<span class="hljs-attribute">name=</span><span class="hljs-literal">alice</span>&<span class="hljs-attribute">joinedBefore=</span><span class="hljs-literal">2011-01-01</span>&<span class="hljs-attribute">joinedAfter=</span><span class="hljs-literal">2011-01-01</span>&<span class="hljs-attribute">sort=</span><span class="hljs-literal">joined</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">25</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json</code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[
+    {
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;alice&quot;</span>,
+        <span class="hljs-attr">&quot;image&quot;</span>: <span class="hljs-string">&quot;http://example.com/alice.jpg&quot;</span>,
+        <span class="hljs-attr">&quot;joined&quot;</span>: <span class="hljs-string">&quot;2013-11-01&quot;</span>
+    },
+    {
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;bob&quot;</span>,
+        <span class="hljs-attr">&quot;image&quot;</span>: <span class="hljs-string">&quot;http://example.com/bob.jpg&quot;</span>,
+        <span class="hljs-attr">&quot;joined&quot;</span>: <span class="hljs-string">&quot;2013-11-02&quot;</span>
+    }
+]</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;array&quot;</span>,
+    <span class="hljs-attr">&quot;maxItems&quot;</span>: <span class="hljs-number">50</span>,
+    <span class="hljs-attr">&quot;items&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;properties&quot;</span>: {
+            <span class="hljs-attr">&quot;name&quot;</span>: {
+                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+            },
+            <span class="hljs-attr">&quot;image&quot;</span>: {
+                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+            },
+            <span class="hljs-attr">&quot;joined&quot;</span>: {
+                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;pattern&quot;</span>: <span class="hljs-string">&quot;\\d{4}-\\d{2}-\\d{2}&quot;</span>
+            }
+        }
+    }
+}</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div class="action get" id="users-user-list-user-list-get"><h4 class="action-heading"><div class="name">Get users</div><a class="method get" href="#users-user-list-user-list-get">GET</a><code class="uri">/users{?name,joinedBefore,joinedAfter,sort,limit}</code></h4><p>Get a list of users. Example:</p>
 <pre><code class="language-no-highlight">https://api.mywebsite.com/users?sort=joined&limit=5</code></pre>
 <div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>name</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>alice</span></span><p>Search for a user by name</p>
 </dd><dt>joinedBefore</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>2011-01-01</span></span><p>Search by join date</p>
@@ -171,141 +235,142 @@
 </dd><dt>sort</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>joined</span></span><p>Which field to sort by</p>
 <p class="choices"><strong>Choices:&nbsp;</strong><code>name</code> <code>joined</code> <code>-joined</code> <code>age</code> <code>-age</code> <code>location</code> <code>-location</code> <code>plan</code> <code>-plan</code> </p></dd><dt>limit</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>The maximum number of users to return, up to <code>50</code></p>
 </dd></dl></div></div></div><hr class="split"><div class="middle"><section class="resource-group" id="tags-and-tagging-long-title"><h2 class="group-heading">Tags and Tagging Long Title <a class="permalink" href="#tags-and-tagging-long-title">&para;</a></h2><p>Get or set tags on notes</p>
-</section></div><div class="middle"><div class="resource" id="tags-and-tagging-long-title-"><h3 class="resource-heading">Resource <a class="permalink" href="#tags-and-tagging-long-title-">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/tags</span></div><div class="tabs"><div class="example-names"><span>Requests</span></div></div></div><div class="middle"><div class="action get" id="tags-and-tagging-long-title-get"><h4 class="action-heading"><div class="name"></div><a class="method get" href="#tags-and-tagging-long-title-get">GET</a><code class="uri">/tags</code></h4><p>Get a list of bars</p>
+</section></div><div class="middle"><div class="resource" id="tags-and-tagging-long-title-"><h3 class="resource-heading">Resource <a class="permalink" href="#tags-and-tagging-long-title-">&para;</a></h3></div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/tags</span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json</code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>[<span class="hljs-string">&quot;tag1&quot;</span>, <span class="hljs-string">&quot;tag2&quot;</span>, <span class="hljs-string">&quot;tag3&quot;</span>]</code></pre><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div class="action get" id="tags-and-tagging-long-title-get"><h4 class="action-heading"><div class="name"></div><a class="method get" href="#tags-and-tagging-long-title-get">GET</a><code class="uri">/tags</code></h4><p>Get a list of bars</p>
 </div></div><hr class="split"><div class="middle"><div class="resource" id="tags-and-tagging-long-title-get-one-tag"><h3 class="resource-heading">Get one tag <a class="permalink" href="#tags-and-tagging-long-title-get-one-tag">&para;</a></h3><p>Get a single tag</p>
-</div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/tags/<span class="hljs-attribute" title="id">id</span></span></div><div class="tabs"><div class="example-names"><span>Requests</span></div></div></div><div class="middle"><div class="action get" id="tags-and-tagging-long-title-get-one-tag-get-one-tag-get"><h4 class="action-heading"><div class="name"></div><a class="method get" href="#tags-and-tagging-long-title-get-one-tag-get-one-tag-get">GET</a><code class="uri">/tags/{id}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Unique tag identifier</p>
-</dd></dl></div></div></div><hr class="split"><div class="middle"><p class="text-muted" style="text-align: center;">Generated by&nbsp;<a class="aglio" href="https://github.com/danielgtaylor/aglio">aglio</a>&nbsp;on 28 Apr 2021</p></div></div></div></div><script>/* eslint-env browser */
+</div></div><div class="right"><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">https://api.example.com</span>/tags/<span class="hljs-attribute" title="id">id</span></span></div><div class="tabs"><div class="tabs"><div class="example-names"><span>Responses</span><span class="tab-button">200</span></div><div class="tab"><div><div class="inner"><div class="description text-muted">This response has no content.</div><div style="height: 1px;"></div></div></div></div></div></div></div><div class="middle"><div class="action get" id="tags-and-tagging-long-title-get-one-tag-get-one-tag-get"><h4 class="action-heading"><div class="name"></div><a class="method get" href="#tags-and-tagging-long-title-get-one-tag-get-one-tag-get">GET</a><code class="uri">/tags/{id}</code></h4><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Unique tag identifier</p>
+</dd></dl></div></div></div><hr class="split"><div class="middle"><p class="text-muted" style="text-align: center;">Generated by&nbsp;<a class="aglio" href="https://github.com/danielgtaylor/aglio">aglio</a>&nbsp;on 17 Jun 2021</p></div></div></div></div><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
 /*
   Determine if a string ends with another string.
 */
-function endsWith(str, suffix) {
-    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+function endsWith (str, suffix) {
+	return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
 
 /*
   Get a list of direct child elements by class name.
 */
-function childrenByClass(element, name) {
-  var filtered = [];
+function childrenByClass (element, name) {
+	const filtered = [];
 
-  for (var i = 0; i < element.children.length; i++) {
-    var child = element.children[i];
-    var classNames = child.className.split(' ');
-    if (classNames.indexOf(name) !== -1) {
-      filtered.push(child);
-    }
-  }
+	for (let i = 0; i < element.children.length; i++) {
+		const child = element.children[i];
+		const classNames = child.className.split(' ');
+		if (classNames.indexOf(name) !== -1) {
+			filtered.push(child);
+		}
+	}
 
-  return filtered;
+	return filtered;
 }
 
 /*
   Get an array [width, height] of the window.
 */
-function getWindowDimensions() {
-  var w = window,
-      d = document,
-      e = d.documentElement,
-      g = d.body,
-      x = w.innerWidth || e.clientWidth || g.clientWidth,
-      y = w.innerHeight || e.clientHeight || g.clientHeight;
+function getWindowDimensions () {
+	const w = window;
+	const d = document;
+	const e = d.documentElement;
+	const g = d.body;
+	const x = w.innerWidth || e.clientWidth || g.clientWidth;
+	const y = w.innerHeight || e.clientHeight || g.clientHeight;
 
-  return [x, y];
+	return [x, y];
 }
 
 /*
   Collapse or show a request/response example.
 */
-function toggleCollapseButton(event) {
-    var button = event.target.parentNode;
-    var content = button.parentNode.nextSibling;
-    var inner = content.children[0];
+function toggleCollapseButton (event) {
+	const button = event.target.parentNode;
+	const content = button.parentNode.nextSibling;
+	const inner = content.children[0];
 
-    if (button.className.indexOf('collapse-button') === -1) {
-      // Clicked without hitting the right element?
-      return;
-    }
+	if (button.className.indexOf('collapse-button') === -1) {
+		// Clicked without hitting the right element?
+		return;
+	}
 
-    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-        // Currently showing, so let's hide it
-        button.className = 'collapse-button';
-        content.style.maxHeight = '0px';
-    } else {
-        // Currently hidden, so let's show it
-        button.className = 'collapse-button show';
-        content.style.maxHeight = inner.offsetHeight + 12 + 'px';
-    }
+	if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+		// Currently showing, so let's hide it
+		button.className = 'collapse-button';
+		content.style.maxHeight = '0px';
+	} else {
+		// Currently hidden, so let's show it
+		button.className = 'collapse-button show';
+		content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+	}
 }
 
-function toggleTabButton(event) {
-    var i, index;
-    var button = event.target;
+function toggleTabButton (event) {
+	let i, index;
+	const button = event.target;
 
-    // Get index of the current button.
-    var buttons = childrenByClass(button.parentNode, 'tab-button');
-    for (i = 0; i < buttons.length; i++) {
-        if (buttons[i] === button) {
-            index = i;
-            button.className = 'tab-button active';
-        } else {
-            buttons[i].className = 'tab-button';
-        }
-    }
+	// Get index of the current button.
+	const buttons = childrenByClass(button.parentNode, 'tab-button');
+	for (i = 0; i < buttons.length; i++) {
+		if (buttons[i] === button) {
+			index = i;
+			button.className = 'tab-button active';
+		} else {
+			buttons[i].className = 'tab-button';
+		}
+	}
 
-    // Hide other tabs and show this one.
-    var tabs = childrenByClass(button.parentNode.parentNode, 'tab');
-    for (i = 0; i < tabs.length; i++) {
-        if (i === index) {
-            tabs[i].style.display = 'block';
-        } else {
-            tabs[i].style.display = 'none';
-        }
-    }
+	// Hide other tabs and show this one.
+	const tabs = childrenByClass(button.parentNode.parentNode, 'tab');
+	for (i = 0; i < tabs.length; i++) {
+		if (i === index) {
+			tabs[i].style.display = 'block';
+		} else {
+			tabs[i].style.display = 'none';
+		}
+	}
 }
 
 /*
   Collapse or show a navigation menu. It will not be hidden unless it
   is currently selected or `force` has been passed.
 */
-function toggleCollapseNav(event, force) {
-    var heading = event.target.parentNode;
-    var content = heading.nextSibling;
-    var inner = content.children[0];
+function toggleCollapseNav (event, force) {
+	const heading = event.target.parentNode;
+	const content = heading.nextSibling;
+	const inner = content.children[0];
 
-    if (heading.className.indexOf('heading') === -1) {
-      // Clicked without hitting the right element?
-      return;
-    }
+	if (heading.className.indexOf('heading') === -1) {
+		// Clicked without hitting the right element?
+		return;
+	}
 
-    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-      // Currently showing, so let's hide it, but only if this nav item
-      // is already selected. This prevents newly selected items from
-      // collapsing in an annoying fashion.
-      if (force || window.location.hash && endsWith(event.target.href, window.location.hash)) {
-        content.style.maxHeight = '0px';
-      }
-    } else {
-      // Currently hidden, so let's show it
-      content.style.maxHeight = inner.offsetHeight + 12 + 'px';
-    }
+	if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+		// Currently showing, so let's hide it, but only if this nav item
+		// is already selected. This prevents newly selected items from
+		// collapsing in an annoying fashion.
+		if ((force || window.location.hash) && endsWith(event.target.href, window.location.hash)) {
+			content.style.maxHeight = '0px';
+		}
+	} else {
+		// Currently hidden, so let's show it
+		content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+	}
 }
 
 /*
   Refresh the page after a live update from the server. This only
   works in live preview mode (using the `--server` parameter).
 */
-function refresh(body) {
-    document.querySelector('body').className = 'preload';
-    document.body.innerHTML = body;
+// eslint-disable-next-line no-unused-vars
+function refresh (body) {
+	document.querySelector('body').className = 'preload';
+	document.body.innerHTML = body;
 
-    // Re-initialize the page
-    init();
-    autoCollapse();
+	// Re-initialize the page
+	init();
+	autoCollapse();
 
-    document.querySelector('body').className = '';
+	document.querySelector('body').className = '';
 }
 
 /*
@@ -313,88 +378,88 @@ function refresh(body) {
   as possible on the screen, based on the current window height. This also
   collapses them.
 */
-function autoCollapse() {
-  var windowHeight = getWindowDimensions()[1];
-  var itemsHeight = 64; /* Account for some padding */
-  var itemsArray = Array.prototype.slice.call(
-    document.querySelectorAll('nav .resource-group .heading'));
+function autoCollapse () {
+	const windowHeight = getWindowDimensions()[1];
+	let itemsHeight = 64; /* Account for some padding */
+	const itemsArray = Array.prototype.slice.call(
+		document.querySelectorAll('nav .resource-group .heading'));
 
-  // Get the total height of the navigation items
-  itemsArray.forEach(function (item) {
-    itemsHeight += item.parentNode.offsetHeight;
-  });
+	// Get the total height of the navigation items
+	itemsArray.forEach(function (item) {
+		itemsHeight += item.parentNode.offsetHeight;
+	});
 
-  // Should we auto-collapse any nav items? Try to find the smallest item
-  // that can be collapsed to show all items on the screen. If not possible,
-  // then collapse the largest item and do it again. First, sort the items
-  // by height from smallest to largest.
-  var sortedItems = itemsArray.sort(function (a, b) {
-    return a.parentNode.offsetHeight - b.parentNode.offsetHeight;
-  });
+	// Should we auto-collapse any nav items? Try to find the smallest item
+	// that can be collapsed to show all items on the screen. If not possible,
+	// then collapse the largest item and do it again. First, sort the items
+	// by height from smallest to largest.
+	const sortedItems = itemsArray.sort(function (a, b) {
+		return a.parentNode.offsetHeight - b.parentNode.offsetHeight;
+	});
 
-  while (sortedItems.length && itemsHeight > windowHeight) {
-    for (var i = 0; i < sortedItems.length; i++) {
-      // Will collapsing this item help?
-      var itemHeight = sortedItems[i].nextSibling.offsetHeight;
-      if ((itemsHeight - itemHeight <= windowHeight) || i === sortedItems.length - 1) {
-        // It will, so let's collapse it, remove its content height from
-        // our total and then remove it from our list of candidates
-        // that can be collapsed.
-        itemsHeight -= itemHeight;
-        toggleCollapseNav({target: sortedItems[i].children[0]}, true);
-        sortedItems.splice(i, 1);
-        break;
-      }
-    }
-  }
+	while (sortedItems.length && itemsHeight > windowHeight) {
+		for (let i = 0; i < sortedItems.length; i++) {
+			// Will collapsing this item help?
+			const itemHeight = sortedItems[i].nextSibling.offsetHeight;
+			if ((itemsHeight - itemHeight <= windowHeight) || i === sortedItems.length - 1) {
+				// It will, so let's collapse it, remove its content height from
+				// our total and then remove it from our list of candidates
+				// that can be collapsed.
+				itemsHeight -= itemHeight;
+				toggleCollapseNav({ target: sortedItems[i].children[0] }, true);
+				sortedItems.splice(i, 1);
+				break;
+			}
+		}
+	}
 }
 
 /*
   Initialize the interactive functionality of the page.
 */
-function init() {
-    var i, j;
+function init () {
+	let i, j;
 
-    // Make collapse buttons clickable
-    var buttons = document.querySelectorAll('.collapse-button');
-    for (i = 0; i < buttons.length; i++) {
-        buttons[i].onclick = toggleCollapseButton;
+	// Make collapse buttons clickable
+	const buttons = document.querySelectorAll('.collapse-button');
+	for (i = 0; i < buttons.length; i++) {
+		buttons[i].onclick = toggleCollapseButton;
 
-        // Show by default? Then toggle now.
-        if (buttons[i].className.indexOf('show') !== -1) {
-            toggleCollapseButton({target: buttons[i].children[0]});
-        }
-    }
+		// Show by default? Then toggle now.
+		if (buttons[i].className.indexOf('show') !== -1) {
+			toggleCollapseButton({ target: buttons[i].children[0] });
+		}
+	}
 
-    var responseCodes = document.querySelectorAll('.example-names');
-    for (i = 0; i < responseCodes.length; i++) {
-        var tabButtons = childrenByClass(responseCodes[i], 'tab-button');
-        for (j = 0; j < tabButtons.length; j++) {
-            tabButtons[j].onclick = toggleTabButton;
+	const responseCodes = document.querySelectorAll('.example-names');
+	for (i = 0; i < responseCodes.length; i++) {
+		const tabButtons = childrenByClass(responseCodes[i], 'tab-button');
+		for (j = 0; j < tabButtons.length; j++) {
+			tabButtons[j].onclick = toggleTabButton;
 
-            // Show by default?
-            if (j === 0) {
-                toggleTabButton({target: tabButtons[j]});
-            }
-        }
-    }
+			// Show by default?
+			if (j === 0) {
+				toggleTabButton({ target: tabButtons[j] });
+			}
+		}
+	}
 
-    // Make nav items clickable to collapse/expand their content.
-    var navItems = document.querySelectorAll('nav .resource-group .heading');
-    for (i = 0; i < navItems.length; i++) {
-        navItems[i].onclick = toggleCollapseNav;
+	// Make nav items clickable to collapse/expand their content.
+	const navItems = document.querySelectorAll('nav .resource-group .heading');
+	for (i = 0; i < navItems.length; i++) {
+		navItems[i].onclick = toggleCollapseNav;
 
-        // Show all by default
-        toggleCollapseNav({target: navItems[i].children[0]});
-    }
+		// Show all by default
+		toggleCollapseNav({ target: navItems[i].children[0] });
+	}
 }
 
 // Initial call to set up buttons
 init();
 
 window.onload = function () {
-    autoCollapse();
-    // Remove the `preload` class to enable animations
-    document.querySelector('body').className = '';
+	autoCollapse();
+	// Remove the `preload` class to enable animations
+	document.querySelector('body').className = '';
 };
 </script></body></html>
